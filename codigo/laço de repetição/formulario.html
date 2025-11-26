@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário em Etapas</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Cadastro Pessoal</h1>
+
+    <!-- Barra de progresso -->
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <form id="formCadastro">
+
+        <!-- ETAPA 1 - Dados Pessoais -->
+        <fieldset class="step active" data-step="1">
+            <h2>Ficha de Cadastro</h2>
+
+            <label>Nome completo *</label>
+            <input type="text" id="nome" required>
+
+            <label>E-mail *</label>
+            <input type="email" id="email" required>
+
+            <label>Telefone *</label>
+            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+
+            <label>Data de nascimento *</label>
+            <input type="date" id="nascimento" required>
+
+            <div class="buttons">
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </fieldset>
+
+        <!-- ETAPA 2 - Endereço -->
+        <fieldset class="step" data-step="2">
+            <h2>Endereço</h2>
+
+            <label>CEP *</label>
+            <input type="text" id="cep" placeholder="00000-000" required>
+
+            <label>Logradouro *</label>
+            <input type="text" id="logradouro" required>
+
+            <label>Número *</label>
+            <input type="text" id="numero" required>
+
+            <input type="text" id="bairro" required>
+            <label>Bairro *</label>
+
+            <label>Cidade *</label>
+            <input type="text" id="cidade" required>
+
+            <label>Estado *</label>
+            <select id="estado" required>
+                <option value="">Selecione...</option>
+                <option>SP</option><option>RJ</option><option>MG</option>
+                <option>RS</option><option>PR</option><option>SC</option>
+            </select>
+
+            <label>Complemento</label>
+            <input type="text" id="complemento">
+
+            <div class="buttons">
+                <button type="button" class="prev">Anterior</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </fieldset>
+
+        <!-- ETAPA 3 - Perfil Profissional -->
+        <fieldset class="step" data-step="3">
+            <h2>Perfil Profissional</h2>
+
+            <label>Profissão *</label>
+            <input type="text" id="profissao" required>
+
+            <label>Empresa</label>
+            <input type="text" id="empresa">
+
+            <label>Áreas de interesse *</label>
+            <select id="interesses" multiple required>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Fullstack">Fullstack</option>
+                <option value="Dados">Dados</option>
+            </select>
+
+            <label>Sobre você</label>
+            <textarea id="sobre"></textarea>
+
+            <div class="buttons">
+                <button type="button" class="prev">Anterior</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </fieldset>
+
+        <!-- ETAPA 4 - Confirmação -->
+        <fieldset class="step" data-step="4">
+            <h2>Confirmação</h2>
+            <p>Revise seus dados antes de enviar:</p>
+            <div id="resumo"></div>
+
+            <div class="buttons">
+                <button type="button" class="prev">Anterior</button>
+                <button type="submit" class="finish">Finalizar Cadastro</button>
+            </div>
+        </fieldset>
+
+    </form>
+
+    <div id="successMessage" class="hidden">
+        <h2>Cadastro concluído com sucesso! 🎉</h2>
+    </div>
+
+</div>
+
+<script src="formulario.js"></script>
+
+</body>
+</html>
