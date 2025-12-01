@@ -1,0 +1,36 @@
+body {
+    background-color: hwb(219 33% 0%);
+}
+
+p {
+    color:black;
+}
+
+h1 {
+    background-color: aliceblue;
+    margin-left: 24%;
+    margin-right: 23.5%;
+    font-size: 32px;
+    text-align: center;
+}
+
+.caixa {
+    border-radius: 10px solid black;
+    padding: 20px;
+    position: block;
+    margin-left: 24%;
+    width: 50%;
+    background-color: hwb(219 90% 0%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius:2%;
+
+}
+
+.soldado {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
